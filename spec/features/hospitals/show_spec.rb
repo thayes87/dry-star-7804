@@ -21,6 +21,8 @@ RSpec.describe 'hospitals show page' do
 
       visit hospital_path(@salida)
 
+      expect(page).to have_content("Name: Salida Hospital")
+      
       within "div#doctors" do
         expect(page).to have_content("Name: Dr. Cole")
         expect(page).to have_content("Name: Dr. Tiesa")
