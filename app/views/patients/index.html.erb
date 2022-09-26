@@ -1,0 +1,6 @@
+<h1> Patients Index Page </h1>
+<h3>Adult Patients:</h3>
+<div id="adult_patients">
+<% @sorted_adults.each do |adult| %>
+  <p>Name: <%= adult.name %></p>
+<% end %>
