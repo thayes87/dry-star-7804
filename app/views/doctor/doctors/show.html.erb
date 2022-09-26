@@ -3,12 +3,13 @@
 <p>Name: <%= @doctor.name %></p>
 <p>Specialty: <%= @doctor.specialty %></p>
 <p>University: <%= @doctor.university %></p>
-
-<div id="patients">
+<h3> Patients </h3>
   <% @patients.each do |patient| %>
-    <p>Name: <%= patient.name %></p>
+    <div id=<%= "patient_#{patient.id}"%>>
+      <p>Name: <%= patient.name %>
+      <p><%= link_to "Delete Patient", doctor_patient_path(@doctor, patient), method: :delete %></p>
+    </div>
   <% end %>
-</div>
 
 <div id="hospital">
   <p>"Name: <%= @hospital.name %>"</p>
