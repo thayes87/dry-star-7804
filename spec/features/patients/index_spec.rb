@@ -20,7 +20,7 @@ RSpec.describe 'patients index page' do
       DoctorPatient.create!(doctor_id: @cole.id, patient_id: @maura.id)
 
       visit patients_path
-save_and_open_page
+
       within "div#adult_patients" do
         expect(page).to have_content("Name: Tom")
         expect(page).to have_content("Name: Emmie")
